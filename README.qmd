@@ -123,16 +123,16 @@ format:
   html:  # Regular built-in format
     citeproc: false
     filters:
-      - at: pre-quarto
+      - at: post-quarto
         path: _extensions/andrewheiss/wordcount/citeproc.lua
-      - at: pre-quarto
+      - at: post-quarto
         path: _extensions/andrewheiss/wordcount/wordcount.lua
   jss-pdf:  # Custom third-party format
     citeproc: false
     filters:
-      - at: pre-quarto
+      - at: post-quarto
         path: _extensions/andrewheiss/wordcount/citeproc.lua
-      - at: pre-quarto
+      - at: post-quarto
         path: _extensions/andrewheiss/wordcount/wordcount.lua
 ```
 
@@ -361,9 +361,9 @@ format:
   html:
     citeproc: false
     filters:
-      - at: pre-quarto
+      - at: post-quarto
         path: "path/to/citeproc.lua"
-      - at: pre-quarto
+      - at: post-quarto
         path: "path/to/wordcount.lua"
 ```
 

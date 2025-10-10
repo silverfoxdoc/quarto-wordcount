@@ -2,7 +2,6 @@
 
 # Quarto word count
 
-
 - [Experimental new feature!](#experimental-new-feature)
 - [Why counting words is hard](#why-counting-words-is-hard)
 - [Using the word count script](#using-the-word-count-script)
@@ -186,16 +185,16 @@ format:
   html:  # Regular built-in format
     citeproc: false
     filters:
-      - at: pre-quarto
+      - at: post-quarto
         path: _extensions/andrewheiss/wordcount/citeproc.lua
-      - at: pre-quarto
+      - at: post-quarto
         path: _extensions/andrewheiss/wordcount/wordcount.lua
   jss-pdf:  # Custom third-party format
     citeproc: false
     filters:
-      - at: pre-quarto
+      - at: post-quarto
         path: _extensions/andrewheiss/wordcount/citeproc.lua
-      - at: pre-quarto
+      - at: post-quarto
         path: _extensions/andrewheiss/wordcount/wordcount.lua
 ```
 
@@ -486,9 +485,9 @@ format:
   html:
     citeproc: false
     filters:
-      - at: pre-quarto
+      - at: post-quarto
         path: "path/to/citeproc.lua"
-      - at: pre-quarto
+      - at: post-quarto
         path: "path/to/wordcount.lua"
 ```
 

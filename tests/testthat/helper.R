@@ -9,7 +9,7 @@
 #'   Defaults to the parent frame.
 #' @param test_file An optional file to copy into the temporary directory.
 #' @return The path to the temporary directory.
-create_local_quarto_project <- function(env = parent.frame(), test_file = NULL) {
+create_local_quarto_project <- function(env = parent.frame(), test_file = NULL, csl_file = NULL) {
   # Create temporary folder
   dir <- tempfile(pattern = "test-")
   dir.create(dir)
@@ -33,6 +33,9 @@ create_local_quarto_project <- function(env = parent.frame(), test_file = NULL) 
   file.copy(from = here::here("_extensions"), to = ".", recursive = TRUE)
   if (!is.null(test_file)) {
     file.copy(from = test_file$absolute, to = test_file$qmd)
+  }
+  if (!is.null(csl_file)) {
+    file.copy(from = csl_file$absolute, to = csl_file$qmd)
   }
   
   invisible(dir)

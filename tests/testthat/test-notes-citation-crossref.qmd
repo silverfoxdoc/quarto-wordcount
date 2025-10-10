@@ -1,14 +1,7 @@
 ---
-title: Use as filter instead of output format
-
-format:
-  markdown:
-    filters:
-      - at: post-quarto
-        path: _extensions/wordcount/citeproc.lua
-      - at: post-quarto
-        path: _extensions/wordcount/wordcount.lua
-    citeproc: false
+title: Body + references
+format: wordcount-markdown
+csl: chicago-notes-bibliography.csl
 
 references:
 - id: Lovelace1842
@@ -29,10 +22,10 @@ references:
   volume: 3
 ---
 
-Here are four words [@Lovelace1842].^[A note]
+Here are four words [@Lovelace1842]. See @tbl-example for more.
 
-::: {#appendix-count}
+| a | b |
+|---|---|
+| 1 | 2 |
 
-There are five words here.
-
-:::
+: Three words here {#tbl-example}
