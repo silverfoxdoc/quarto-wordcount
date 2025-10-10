@@ -1,5 +1,5 @@
 ---
-title: Body + references
+title: Body + references + note-based citations + crossrefs
 format: wordcount-markdown
 csl: chicago-notes-bibliography.csl
 

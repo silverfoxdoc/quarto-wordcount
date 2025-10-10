@@ -10,9 +10,9 @@ format: wordcount-html
 # format:
 #   html:
 #     filters:
-#       - at: post-quarto
+#       - at: pre-quarto
 #         path: path/to/citeproc.lua
-#       - at: post-quarto
+#       - at: pre-quarto
 #         path: path/to/wordcount.lua
 #     citeproc: false
 
