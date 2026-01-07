@@ -28,6 +28,9 @@ return {
   ['words-note'] = function(args, kwargs, meta)
     return as_str(meta.wordcount_note_words, "wordcount_note_words")
   end,
+  ['words-abstract'] = function(args, kwargs, meta)
+    return as_str(meta.wordcount_abstract_words, "wordcount_abstract_words")
+  end,
   ['words-total'] = function(args, kwargs, meta)
     return as_str(meta.wordcount_total_words, "wordcount_total_words")
   end,
@@ -42,6 +45,9 @@ return {
     --print(arg)
     if arg:match("body") then
       count = count + as_num(meta.wordcount_body_words, "wordcount_total_words")
+    end
+    if arg:match("abstract") then
+      count = count + as_num(meta.wordcount_abstract_words, "wordcount_abstract_words")
     end
     if arg:match("ref") then
       count = count + as_num(meta.wordcount_ref_words, "wordcount_ref_words")

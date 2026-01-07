@@ -1,0 +1,7 @@
+---
+title: Abstract with formatting
+abstract: This abstract has **bold text** and *italic text* and `inline code` for testing.
+format: wordcount-markdown
+---
+
+Body text.

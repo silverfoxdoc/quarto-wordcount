@@ -1,0 +1,9 @@
+---
+title: Abstract test (multiline)
+abstract: |
+  Here's a multiline abstract that uses the pipe syntax.
+  It has two sentences across two lines with twenty total words.
+format: wordcount-markdown
+---
+
+Body text with five words.

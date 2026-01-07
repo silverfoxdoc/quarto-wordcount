@@ -68,13 +68,13 @@ test_file_parts <- function(filename) {
 #' @returns A character object containing the word count section from the
 #'   terminal output
 extract_output <- function(raw_output) {
-  start_index <- grep("^Overall totals:", raw_output)
+  start_index <- grep("^Manuscript totals:", raw_output)
   end_index <- grep("^Output created:", raw_output) - 1
   actual_output <- paste0(raw_output[start_index:end_index], collapse = "\n")
-  
+
   # Remove Windows's \r linebreaks from the output 
   actual_output <- gsub("\r", "", actual_output)
-  
+
   actual_output
 }
 

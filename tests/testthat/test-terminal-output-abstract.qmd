@@ -1,0 +1,7 @@
+---
+title: Document with abstract
+abstract: Abstract with four words
+format: wordcount-markdown
+---
+
+Body with four words.

@@ -1,0 +1,7 @@
+---
+title: Abstract test (single line)
+abstract: This is an eight word single line abstract.
+format: wordcount-markdown
+---
+
+Body text with five words.

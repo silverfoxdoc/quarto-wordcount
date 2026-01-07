@@ -201,11 +201,12 @@ format:
 ### Terminal output
 
 The word count will appear in the terminal output when rendering the
-document. It shows multiple values:
+document. It shows multiple values across three sections:
 
-- **Overall totals**: (1) the total count of everything, including the
-  body, notes, references, and appendix sections, and (2) the count for
-  just the body and notes.
+- **Manuscript totals**: (1) the count for the body, notes, and
+  references, (2) the count for just the body and notes, and (3) if
+  there’s an appendix, the count for the body, notes, references, and
+  appendix.
 
   The journals I typically work with count the body + notes + references
   towards the total word count. When shrinking manuscripts to fit word
@@ -213,21 +214,34 @@ document. It shows multiple values:
   body + notes so I can more easily see where edits might be most
   efficient (e.g. re-word sentences vs. remove references)
 
-- **Individual section totals**: counts for the (1) text body, (2)
-  notes, (3) references, and (4) appendix
+- **Specific totals**: counts for the (1) text body, (2) notes, (3)
+  references, and (4) appendix
+
+- **Overall totals**: counts for (1) everything, including the abstract,
+  and (2) the abstract by itself.
+
+  The abstract total is included here because it’s rarely counted as
+  part of the actual manuscript word limit itself, but still needs to be
+  counted since it generally has its own separate word count.
 
 ``` text
-Overall totals:
---------------------------------
-- 451 total words
-- 378 words in body and notes
+Manuscript totals:
+---------------------------------------------------
+- 458 words (text + notes + references)
+- 405 words (text + notes)
+- 478 words (text + notes + appendix + references)
 
-Section totals:
---------------------------------
+Specific totals:
+---------------------------------------------------
 - 315 words in text body
-- 63 words in notes
-- 53 words in reference section
-- 20 words in appendix section
+- 90 words in notes
+- 53 words in references
+- 20 words in appendix
+
+Overall totals:
+---------------------------------------------------
+- 484 words in entire document
+- 6 words in abstract
 ```
 
 ### Shortcodes
@@ -249,8 +263,11 @@ counts directly in the document:
 
 - Use `{{< words-note >}}` to include a count of the words in the notes
 
+- Use `{{< words-abstract >}}` to include a count of the words in the
+  abstract
+
 - Use `{{< words-sum ARG >}}` where `ARG` is some concatenation of the
-  four countable areas: `body`, `ref`, `append`, and `note`
+  five countable areas: `body`, `ref`, `append`, `note`, and `abstract`
 
   For example, `{{< words-sum body-note >}}` includes a count of the
   words in the body and notes; `{{< words-sum ref-append >}}` includes a

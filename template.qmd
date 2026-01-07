@@ -3,6 +3,8 @@ title: Some title
 author: Some author
 date: last-modified
 
+abstract: Here's an abstract for the document
+
 # Use as a custom format:
 format: wordcount-html
 
