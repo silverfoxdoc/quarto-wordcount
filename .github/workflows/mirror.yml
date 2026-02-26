@@ -1,0 +1,21 @@
+name: Mirror Upstream
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Mirror Upstream
+        uses: repo-sync/github-sync@v2
+        with:
+          source_repo: "andrewheiss/quarto-wordcount"
+          source_branch: "main"
+          destination_branch: "main"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
