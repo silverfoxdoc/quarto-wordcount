@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Mirror Upstream
         uses: repo-sync/github-sync@v2
         with:
-          source_repo: "andrewheiss/quarto-wordcount"
+          source_repo: "https://github.com/andrewheiss/quarto-wordcount.git"
           source_branch: "main"
           destination_branch: "main"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.AUTOMATION_WORKFLOW_PAT }}
